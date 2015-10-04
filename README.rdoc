@@ -1,0 +1,25 @@
+== README
+
+A Rails app to allow editing of the PostGIS database for use with Croatian Restaurants in Los Angeles project.
+Maybe expand to a whole website for the project.
+
+==Implementation notes
+
+  rails generate model address \
+  address:string  city:string state:string "longitude:decimal{9,6}" "latitude:decimal{9,6}" extant:boolean current:string notes:string \
+  --fixture false
+  
+  rails g scaffold Address address:string  city:string state:string "longitude:decimal{9,6}" "latitude:decimal{9,6}" extant:boolean current:string notes:string
+  
+  Now can see http://localhost:3000/addresses and enter data
+  
+==TO DO
+
+Can't add data via sql in pgadmin, see error
+Add Los Angeles and California as defaults
+Add Geometry. Maybe just fields and then run the sql I already have.
+
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.

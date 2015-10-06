@@ -1,0 +1,5 @@
+rails generate model person \
+     name:string  Date_of_Birth:date Date_of_Entry:date DoE_Source:string Date_of_Citizenship:date notes:string \
+     --fixture false
+     
+     #run from CLI

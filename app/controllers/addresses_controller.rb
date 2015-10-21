@@ -20,6 +20,12 @@ class AddressesController < ApplicationController
   # GET /addresses/1/edit
   def edit
   end
+  
+  # Get coordinates/ GVS addition
+  def coords
+    # the following line is a minor change from a tutorial. Don't really know what it means
+    @address = Address.find(params[:id])
+  end
 
   # POST /addresses
   # POST /addresses.json

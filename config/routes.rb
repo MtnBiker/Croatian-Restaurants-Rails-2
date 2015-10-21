@@ -59,6 +59,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   
-  resources :addresess
-  resources :people
+  # Following two lines are duplicates
+  # resources :addresess
+  # resources :people
 end

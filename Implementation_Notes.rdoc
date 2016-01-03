@@ -1,0 +1,62 @@
+  ==Implementation notes. Incomplete 
+
+  $ rails new croresrails2 -d postgresql [see log]
+  Then in a new terminal window
+  $ psql
+  $ \c croresrails2_development
+  You are now connected to database "croresrails2_development" as user "gscar". [this line is feedback]
+  croresrails2_development-# create extension postgis
+  CREATE EXTENSION
+  croresrails2_development=#  [probably done with psql. Can look with pgadmin and see the extension]
+  rails generate model address \
+  address:string  city:string state:string "longitude:decimal{9,6}" "latitude:decimal{9,6}" extant:boolean current:string notes:string \
+  --fixture false
+  [Added defaults later, still need geometry]
+  
+  rails g scaffold Address address:string  city:string state:string "longitude:decimal{9,6}" "latitude:decimal{9,6}" extant:boolean current:string notes:string
+  
+  Now can see http://localhost:3000/addresses and enter data
+  
+  See lib/assets/import_addresses.rake for importing csv data
+  
+  See /other for some of the Rails tasks to create databases etc
+  
+  rails generate model person \
+     name:string  Date_of_Birth:date Date_of_Entry:date DoE_Source:string Date_of_Citizenship:date notes:string \
+     --fixture false
+   
+  rails g scaffold Person name:string  Date_of_Birth:date Date_of_Entry:date DoE_Source:string Date_of_Citizenship:date notes:string
+  
+  bin/rails generate controller welcome index
+
+$ rails generate migration enable_postgis
+Edit the migration (file given in messages), and write (really adding middle line):
+
+class EnablePostgis < ActiveRecord::Migration
+  def change
+    enable_extension :postgis
+  end
+end
+
+Adding geom column. Let's see if this will work when try to convert the lat lon. Do I need the bin?
+$ bin/rails generate migration AddGeometryToAddresses geom:geometry [if htis works, just add this item in original migration]
+
+Adding an Acknowledgements Table
+$ rails generate scaffold acknowledgement name:string url:string subject:string comments:string
+
+From pgAdmin [how do this in Rails command line. Actually this looks like any other migration. Just need to work on the formatting of what to add to the migration]
+UPDATE addresses SET geom = ST_SetSRID(ST_MakePoint(longitude,latitude),4326);
+
+QGIS asked if I wanted to add an index to addresses and I clicked yes. 2015.10.10
+
+Added database layer in QGIS. Was able to see croresrails2, but now to display it.
+
+Then added a PostGIS layer via the icon on the left that looked like pgAdmin icon. Found the geom item in the window that opened. The little dots show up on a map. I used Bing aerial as background. Need to use my overlays as background.
+Can add croresrails2 database to the other QGIS projects I had created. Need to work on the Sanborn map overlay/underlay. done
+
+Adding addresses via rake. Errors
+ rake csv_model_import[other/addresses_import_using_rails_2015.10.11.csv,Address]
+ 
+ Added views/addresses/coords.html.erb view to find and add coordinates to an address. Gropping in the dark. Put together from tutorial and edit view. But will need serious work.
+ 
+Adding coordinates with a Ruby script (other/Mapbox Coordinates for address.Link) for many of the addresses. Uses Mapbox to find coordinates and I manually enter them into the datbase via this app.

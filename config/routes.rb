@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :years
   resources :acknowledgements
   get 'welcome/index'
 

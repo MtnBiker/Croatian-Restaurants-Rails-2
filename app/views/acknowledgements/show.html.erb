@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @acknowledgement.name %>
+</p>
+
+<p>
+  <strong>URL:</strong>
+  <%= @acknowledgement.url %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @acknowledgement.subject %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @acknowledgement.comments %>
+</p>
+
+<%= link_to 'Edit', edit_acknowledgement_path(@acknowledgement) %> |
+<%= link_to 'Back', acknowledgements_path %>

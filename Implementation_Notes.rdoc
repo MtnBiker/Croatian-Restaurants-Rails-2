@@ -59,4 +59,13 @@ Adding addresses via rake. Errors
  
  Added views/addresses/coords.html.erb view to find and add coordinates to an address. Gropping in the dark. Put together from tutorial and edit view. But will need serious work.
  
+<<<<<<< Local Changes
 Adding coordinates with a Ruby script (other/Mapbox Coordinates for address.Link) for many of the addresses. Uses Mapbox to find coordinates and I manually enter them into the datbase via this app.
+
+rails g migration CreateJoinTablePersonAddressYear person address year
+
+rails g controller PersonAddressYear
+
+rails g model PersonAddressYear  person address year
+=======
+Adding coordinates with a Ruby script (other/Mapbox Coordinates for address.Link) for many of the addresses. Uses Mapbox to find coordinates and I manually enter them into the datbase via this app.>>>>>>> External Changes

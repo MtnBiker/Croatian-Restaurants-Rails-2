@@ -16,7 +16,7 @@
   </thead>
 
   <tbody>
-    <% @people.each do |person| %>
+    <% @people.sort_by(&:name).each do |person| %> <!-- Note sort by except doing by first name. Need to seperate names. Why did I do it this way?-->
       <tr>
         <td><%= person.name %></td>
         <td><%= person.Date_of_Birth %></td>

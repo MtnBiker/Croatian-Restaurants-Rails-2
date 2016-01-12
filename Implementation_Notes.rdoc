@@ -66,6 +66,11 @@ rails g migration CreateJoinTablePersonAddressYear person address year
 
 rails g controller PersonAddressYear
 
+Save for later, doesn't work with nil entriesio    <!-- <% @people.sort_by(&:name).each do |person| %>  Note sort by except doing by first name. Need to seperate names. Why did I do it this way? -->
+
+
 rails g model PersonAddressYear  person address year
 =======
 Adding coordinates with a Ruby script (other/Mapbox Coordinates for address.Link) for many of the addresses. Uses Mapbox to find coordinates and I manually enter them into the datbase via this app.>>>>>>> External Changes
+====
+Why did I not have first and last name? There was a reason. But it prevents easy sorting.

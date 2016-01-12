@@ -227,9 +227,9 @@ input {
   margin-left: 0;
 }
 
-/* Users index. Was .users. li if go to Hartl helper. *-name are GVS  Padding could be refined.*/
+/* Users and Addresses index. Was .users. li if go to Hartl helper. *-name are GVS  Padding could be refined.*/
 
-.people {
+.people, .addresses {
   list-style: none;
   margin: 0;
   li, td, th {
@@ -237,6 +237,12 @@ input {
     padding: 2px 6px;
     border-bottom: 1px solid $gray-light;
     border-left: 1px solid $gray-lighter;
+    .asc {
+      background-image: url(/images/up_arrow.gif);
+    }
+    .desc {
+      background-image: url(/images/down_arrow.gif);
+    }
   }
   .given-name {
     text-align: right;
@@ -248,6 +254,12 @@ input {
   }
 }
 
+/* From tutorial to get up and down arrows in sort. Need to move into .people and change style class */
+.pretty th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
 
 /* miscellaneous */
 

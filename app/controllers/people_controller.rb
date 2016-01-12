@@ -1,10 +1,11 @@
 class PeopleController < ApplicationController
+  helper_method :sort_column, :sort_direction
   before_action :set_person, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /people
   # GET /people.json
   def index
-    @people = Person.order(params[:sort])
+    @people = Person.order(sort_column + " " + sort_direction)
   end
 
   # GET /people/1
@@ -72,4 +73,13 @@ class PeopleController < ApplicationController
     def person_params
       params.require(:person).permit(:name, :Date_of_Birth, :Date_of_Entry, :DoE_Source, :Date_of_Citizenship, :notes)
     end
+      
+    def sort_column
+      Person.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    end
+  
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+    end
+    
 end

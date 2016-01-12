@@ -5,7 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th class="given-name">First</th>
+      <th class="last-name">Last</th>
       <th>Date of birth</th>
       <th>Date of entry</th>
       <th>Doe source</th>
@@ -18,7 +19,8 @@
   <tbody>
     <% @people.sort_by(&:name).each do |person| %> 
       <tr>
-        <td><%= person.name %></td>
+        <td class="given-name"><%= person.given_name %></td>
+        <td><%= person.last_name %></td>
         <td><%= person.Date_of_Birth %></td>
         <td><%= person.Date_of_Entry %></td>
         <td><%= person.DoE_Source %></td>

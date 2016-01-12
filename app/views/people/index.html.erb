@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing People</h1>
+<% provide(:title, 'All users') %>
+<h1>All people</h1>
 
 <table>
   <thead>
-    <tr>
+    <tr class="people">
       <th class="given-name">First</th>
       <th class="last-name">Last</th>
       <th>Date of birth</th>
@@ -17,8 +17,8 @@
   </thead>
 
   <tbody>
-    <% @people.sort_by(&:name).each do |person| %> 
-      <tr>
+    <% @people.sort_by(&:name).each do |person| %>
+      <tr class="people">
         <td class="given-name"><%= person.given_name %></td>
         <td><%= person.last_name %></td>
         <td><%= person.Date_of_Birth %></td>
@@ -33,6 +33,15 @@
     <% end %>
   </tbody>
 </table>
+
+<!-- This from Hartl works as far as it goes, but need detailed information I'm providing, so have to move the table logic to helper or?
+<% provide(:title, 'All users') %>
+<h1>All people</h1>
+
+
+<ul class="people">
+  <%= render @people%>
+</ul> -->
 
 <br>
 

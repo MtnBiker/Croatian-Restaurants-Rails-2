@@ -10,6 +10,7 @@ class PeopleController < ApplicationController
   # GET /people/1
   # GET /people/1.json
   def show
+    @people = User.find(params[:id]) # from Hartl. May not be being used unless I change things.
   end
 
   # GET /people/new

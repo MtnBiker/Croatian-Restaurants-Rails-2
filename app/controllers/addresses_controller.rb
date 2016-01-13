@@ -1,10 +1,11 @@
 class AddressesController < ApplicationController
+  helper_method :sort_column, :sort_direction
   before_action :set_address, only: [:show, :edit, :update, :destroy]
 
   # GET /addresses
   # GET /addresses.json
   def index
-    @addresses = Address.all
+    @addresses = Address.order(sort_column + " " + sort_direction)
   end
 
   # GET /addresses/1
@@ -77,4 +78,13 @@ class AddressesController < ApplicationController
     def address_params
       params.require(:address).permit(:address, :city, :state, :longitude, :latitude, :extant, :current, :notes)
     end
+    
+    def sort_column
+      Address.column_names.include?(params[:sort]) ? params[:sort] : "address"
+    end
+  
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+    end
+    
 end

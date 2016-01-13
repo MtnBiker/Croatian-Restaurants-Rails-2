@@ -2,3 +2,6 @@
 * Geocode
 ** Finish those that can be done with the Ruby script (or build the script into the app)
 ** Other addresses may require locating on a period map in QGIS or similar and getting coords manually 
+** Add user and admin log-in. Maybe can copy over the user MVC from crores3 since used the same dB.
+
+

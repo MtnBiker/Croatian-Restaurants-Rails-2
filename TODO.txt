@@ -1,4 +1,6 @@
-* Add Poeple vs. Years
+* Add People vs. Years
 * Geocode
 ** Finish those that can be done with the Ruby script (or build the script into the app)
 ** Other addresses may require locating on a period map in QGIS or similar and getting coords manually 
+** What is the "Show" page for? Confirms what's on the edit page. Probably not something I need unless pictures or something were to be added.
+** Can't edit/change last or first name, but can edit/change name (full)

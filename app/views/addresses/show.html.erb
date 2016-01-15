@@ -32,7 +32,7 @@
 
 <p>
   <strong>Current:</strong>
-  <%= @address.current %>
+  <%= @address.current_description %>
 </p>
 
 <p>
@@ -41,4 +41,4 @@
 </p>
 
 <%= link_to 'Edit', edit_address_path(@address) %> |
-<%= link_to 'Back', addresses_path %>
+<%= link_to 'To address list', addresses_path %>

@@ -6,8 +6,10 @@
 </p>
 
 <p>
-  <strong>Given, Last:</strong>
-  <%= @person.given_name %>, <%= @person.last_name %> (Comma so can tell if fields are correct)
+  <strong>Given:</strong>
+  <%= @person.given_name %>
+  <strong>,  Last:</strong>
+  <%= @person.last_name %> 
 </p>
 
 <p>
@@ -36,4 +38,4 @@
 </p>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>.  Note that dates cannot be currently edited. Use pgAdmin or ask Greg to fix the form.
+<%= link_to 'To people list', people_path %>.  Note that dates cannot be currently edited. Use pgAdmin or ask Greg to fix the form.

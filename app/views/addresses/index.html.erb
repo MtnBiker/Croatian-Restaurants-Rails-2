@@ -5,13 +5,15 @@
 <table class="addresses pretty">
   <thead>
     <tr>
-      <th><%= sortable "address", "Address" %></th>
-      <th><%= sortable "city", "City" %></th>
-      <th><%= sortable "longitude", "Longitude" %></th>
-      <th><%= sortable "latitude", "Latitude" %></th>
-      <th><%= sortable "extant", "Extant" %></th>
+
+      <th><%= sortable "address" %></th>
+      <th><%= sortable "city" %></th>
+      <th><%= sortable "longitude" %></th>
+      <th><%= sortable "latitude" %></th>
+      <th><%= sortable "extant" %></th>
       <th><%= sortable "current_description", "Current" %></th>
-      <th><%= sortable "notes", "Notes" %></th>
+      <th><%= sortable "notes" %></th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -39,4 +41,5 @@
 
 <br>
 
-<%= link_to 'New Address', new_address_path %>
+<%= link_to 'New Address', new_address_path , class: "btn btn-primary"%>
+<%= render 'layouts/footer' %>

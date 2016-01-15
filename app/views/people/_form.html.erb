@@ -12,45 +12,51 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :id, "ID" %>
+    <%= f.text_field :id , disabled: true %>
   </div>
 
   <div class="field">
-    <%= f.label :given_name %><br>
+    <%= f.label :name %> 
+    <%= f.text_field :name, disabled: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :given_name %>
     <%= f.text_field :given_name %>
   </div>
 
   <div class="field">
-    <%= f.label :last_name %><br>
+    <%= f.label :last_name %>
     <%= f.text_field :last_name %>
   </div>
   
   <div class="field">
-    <%= f.label :date_of_birth %><br>
+    <%= f.label :date_of_birth %>
     <%= f.text_field :date_of_birth %>
   </div>
   
   <div class="field">
-    <%= f.label :date_of_entry %><br>
+    <%= f.label :date_of_entry %>
     <%= f.text_field :date_of_entry %>
   </div>
 
   <div class="field">
-    <%= f.label :doe_source , "DoE Source"%><br>
+    <%= f.label :doe_source , "DoE Source"%>
     <%= f.text_field :doe_source %>
   </div>
 
   <div class="field">
-    <%= f.label :date_of_citizenship %><br>
+    <%= f.label :date_of_citizenship %>
     <%= f.text_field :date_of_citizenship %>
   </div>
 
   <div class="field">
-    <%= f.label :notes %><br>
+    <%= f.label :notes %>
     <%= f.text_field :notes %>
   </div>
+  
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Save changes", class: "btn btn-primary" %>
   </div>
 <% end %>

@@ -18,3 +18,13 @@ Links to other pages.
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+echo "ruby-2.3.0" > .ruby-version [good enough for Rails 5 if I move on]
+gem install bundler
+bundle install
+[failed on pg]
+sudo su
+env ARCHFLAGS="-arch x86_64" gem install pg
+Ignoring pg-0.18.4 because its extensions are not built.  Try: gem pristine pg --version 0.18.4
+Eventually "gem install pg -v '0.18.4'" worked
+Added SSH key links to GitHub

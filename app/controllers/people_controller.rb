@@ -11,7 +11,8 @@ class PeopleController < ApplicationController
   # GET /people/1
   # GET /people/1.json
   def show
-    @people = Person.find(params[:id]) # from Hartl. May not be being used unless I change things.
+    @people = Person.find(params[:id]) 
+    
   end
 
   # GET /people/new
@@ -21,6 +22,7 @@ class PeopleController < ApplicationController
 
   # GET /people/1/edit
   def edit
+    @person = Person.find(params[:id])
   end
 
   # POST /people

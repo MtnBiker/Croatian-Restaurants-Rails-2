@@ -5,6 +5,7 @@
 <table class="pretty">
   <thead>
     <tr class="people">
+      <th><%= sortable "id" , "ID"       %></th>
       <th class="given-name"><%= sortable "given_name", "First"   %></th>
       <th class="last-name" ><%= sortable "last_name" , "Last"  %></th>
       <th><%= sortable "date_of_birth"        %></th>
@@ -18,6 +19,7 @@
   <% for person in @people %>
   <tbody>
       <tr class="people">
+        <td class="given-name"><%= person.id %></td>
         <td class="given-name"><%= person.given_name %></td>
         <td class="last-name" ><%= person.last_name  %></td>
         <td>                   <%= person.date_of_birth %></td>
@@ -36,3 +38,4 @@
 <br>
 
 <%= link_to 'New Person', new_person_path %>
+<%= render 'layouts/footer' %>

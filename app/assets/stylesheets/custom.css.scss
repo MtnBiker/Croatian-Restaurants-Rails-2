@@ -110,6 +110,19 @@ footer {
   }
 }
 
+/* _form field. I don't know if this will affect other pages. If other pages affected create a wrapping div on the form field. I also don't know why without this the field extends full width. 
+
+The form had a <br> after the field which I took out and it didn't change anything. There is still an implied break. I would rather have the field description to the left. */
+
+.field, .actions {
+  width: 250px;
+  padding: 0px 50px;
+}
+
+.actions {
+  text-style: bold;
+}
+
 /* sidebar */
 
 aside {

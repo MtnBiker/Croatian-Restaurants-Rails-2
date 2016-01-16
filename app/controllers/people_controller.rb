@@ -73,7 +73,7 @@ class PeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
-      params.require(:person).permit(:name, :date_of_birth, :date_of_entry, :doe_source, :date_of_citizenship, :notes)
+      params.require(:person).permit(:name, :date_of_birth, :date_of_entry, :doe_source, :date_of_citizenship, :notes, :last_name, :given_name)
     end
       
     def sort_column

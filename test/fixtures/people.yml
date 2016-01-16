@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  Date_of_Birth: 2015-10-04
-  Date_of_Entry: 2015-10-04
-  DoE_Source: MyString
-  Date_of_Citizenship: 2015-10-04
-  notes: MyString
+  name: MyString11
+  date_of_birth: 2015-10-04
+  date_of_entry: 2015-10-04
+  doe_source: MyString13
+  date_of_citizenship: 2015-10-04
+  notes: MyString15
 
 two:
-  name: MyString2
-  Date_of_Birth: 2016-10-04
-  Date_of_Entry: 2016-10-04
-  DoE_Source: MyString2
-  Date_of_Citizenship: 2016-10-04
-  notes: MyString2
+  name: MyString22
+  date_of_birth: 2016-10-04
+  date_of_entry: 2016-10-04
+  doe_source: MyString24
+  date_of_citizenship: 2016-10-04
+  notes: MyString26

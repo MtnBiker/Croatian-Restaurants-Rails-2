@@ -1,21 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  address: MyString
-  city: MyString
-  state: MyString
+  address: MyString31
+  city: MyString3
+  state: MyString5
   longitude: 9.99
   latitude: 9.99
   extant: false
-  current_description: MyString
-  notes: MyString
+  current_description: MyString7
+  notes: MyString9
 
 two:
   address: MyString2
-  city: MyString2
-  state: MyString2
+  city: MyString4
+  state: MyString6
   longitude: 9.992
   latitude: 9.992
   extant: false
-  current_description: MyString2
-  notes: MyString2
+  current_description: MyString8
+  notes: MyString0

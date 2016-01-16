@@ -7,15 +7,15 @@ one:
   longitude: 9.99
   latitude: 9.99
   extant: false
-  current: MyString
+  current_description: MyString
   notes: MyString
 
 two:
-  address: MyString
-  city: MyString
-  state: MyString
-  longitude: 9.99
-  latitude: 9.99
+  address: MyString2
+  city: MyString2
+  state: MyString2
+  longitude: 9.992
+  latitude: 9.992
   extant: false
-  current: MyString
-  notes: MyString
+  current_description: MyString2
+  notes: MyString2

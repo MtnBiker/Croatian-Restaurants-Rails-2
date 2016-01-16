@@ -22,10 +22,10 @@
   See /other for some of the Rails tasks to create databases etc
   
   rails generate model person \
-     name:string  Date_of_Birth:date Date_of_Entry:date DoE_Source:string Date_of_Citizenship:date notes:string \
+     name:string  date_of_birth:date date_of_entry:date doe_source:string date_of_citizenship:date notes:string \
      --fixture false
    
-  rails g scaffold Person name:string  Date_of_Birth:date Date_of_Entry:date DoE_Source:string Date_of_Citizenship:date notes:string
+  rails g scaffold person name:string  date_of_birth:date date_of_entry:date doe_source:string date_of_citizenship:date notes:string
   
   bin/rails generate controller welcome index
 

@@ -76,7 +76,7 @@ class AddressesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def address_params
-      params.require(:address).permit(:address, :city, :state, :longitude, :latitude, :extant, :current, :notes)
+      params.require(:address).permit(:address, :city, :state, :longitude, :latitude, :extant, :current_description, :notes)
     end
     
     def sort_column

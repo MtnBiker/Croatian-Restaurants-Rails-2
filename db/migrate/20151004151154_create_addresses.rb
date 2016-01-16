@@ -7,7 +7,7 @@ class CreateAddresses < ActiveRecord::Migration
       t.decimal :longitude, precision: 9, scale: 6
       t.decimal :latitude, precision: 9, scale: 6
       t.boolean :extant
-      t.string :current
+      t.string :current_description
       t.string :notes
 
       t.timestamps null: false

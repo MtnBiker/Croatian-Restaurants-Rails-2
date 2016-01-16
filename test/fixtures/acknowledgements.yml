@@ -7,7 +7,7 @@ one:
   comments: MyString
 
 two:
-  name: MyString
-  url: MyString
-  subject: MyString
-  comments: MyString
+  name: MyString2
+  url: MyString2
+  subject: MyString2
+  comments: MyString2

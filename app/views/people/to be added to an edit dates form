@@ -1,16 +1,16 @@
 <div class="field">
-  <%= f.label :Date_of_Birth %><br>
-  <%= f.date_select :Date_of_Birth, start_year: 1850, end_year: 1930 %>
+  <%= f.label :date_of_birth %><br>
+  <%= f.date_select :date_of_birth, start_year: 1850, end_year: 1930 %>
 </div>
 <div class="field">
-  <%= f.label :Date_of_Entry %><br>
-  <%= f.date_select :Date_of_Entry, start_year: 1870, end_year: 1930  %>
+  <%= f.label :date_of_entry %><br>
+  <%= f.date_select :date_of_entry, start_year: 1870, end_year: 1930  %>
 </div>
 <div class="field">
-  <%= f.label :DoE_Source %><br>
-  <%= f.text_field :DoE_Source %>
+  <%= f.label :doe_source %><br>
+  <%= f.text_field :doe_source %>
 </div>
 <div class="field">
-  <%= f.label :Date_of_Citizenship %><br>
-  <%= f.date_select :Date_of_Citizenship , start_year: 1880, end_year: 1930 %>
+  <%= f.label :date_of_citizenship %><br>
+  <%= f.date_select :date_of_citizenship , start_year: 1880, end_year: 1930 %>
 </div>
